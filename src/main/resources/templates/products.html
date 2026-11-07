@@ -45,10 +45,14 @@
                 <th th:text="#{product.id}">
                     ID
                 </th>
+                <th th:text="#{product.image}">
+                    Ảnh
+                </th>
 
                 <th th:text="#{product.name}">
                     Tên sản phẩm
                 </th>
+
 
                 <th th:text="#{product.price}">
                     Giá
@@ -80,6 +84,19 @@
 
                 <td th:text="${product.id}">
                     1
+                </td>
+                <td>
+                    <img th:if="${product.imageUrl != null}"
+                         th:src="${product.imageUrl}"
+                         class="img-thumbnail"
+                         style="width: 70px;
+                height: 70px;
+                object-fit: cover;">
+
+                    <span th:unless="${product.imageUrl != null}"
+                          class="text-muted">
+        -
+    </span>
                 </td>
 
                 <td th:text="${product.name}">

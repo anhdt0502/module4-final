@@ -37,6 +37,8 @@ public class SecurityConfig {
                         .requestMatchers("/categories/**").permitAll()
                         .requestMatchers("/cart/**").permitAll()
                         .requestMatchers("/language").permitAll()
+                        .requestMatchers("/images/**").permitAll()
+                        .requestMatchers("/uploads/**").permitAll()
 
                         .requestMatchers("/api/**").authenticated()
 

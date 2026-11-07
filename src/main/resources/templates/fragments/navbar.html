@@ -12,7 +12,10 @@
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarContent">
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -23,6 +26,7 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+                <!-- Sản phẩm -->
                 <li class="nav-item">
                     <a class="nav-link"
                        href="/products"
@@ -31,6 +35,16 @@
                     </a>
                 </li>
 
+                <!-- Danh mục -->
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/categories"
+                       th:text="#{category.list}">
+                        Danh mục
+                    </a>
+                </li>
+
+                <!-- Thêm sản phẩm -->
                 <li class="nav-item">
                     <a class="nav-link"
                        href="/products/create"
@@ -39,6 +53,7 @@
                     </a>
                 </li>
 
+                <!-- Giỏ hàng -->
                 <li class="nav-item">
                     <a class="nav-link"
                        href="/cart"
@@ -49,6 +64,7 @@
 
             </ul>
 
+            <!-- Đổi ngôn ngữ -->
             <div class="d-flex gap-2">
 
                 <a href="/language?lang=vi"
