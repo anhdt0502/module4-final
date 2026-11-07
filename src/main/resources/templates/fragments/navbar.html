@@ -1,0 +1,70 @@
+
+<nav th:fragment="navbar"
+     class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand"
+           href="/products">
+            Fashion Management
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/products"
+                       th:text="#{product.list}">
+                        Sản phẩm
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/products/create"
+                       th:text="#{product.add}">
+                        Thêm sản phẩm
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/cart"
+                       th:text="#{product.cart}">
+                        Giỏ hàng
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-2">
+
+                <a href="/language?lang=vi"
+                   class="btn btn-outline-light btn-sm">
+                    Tiếng Việt
+                </a>
+
+                <a href="/language?lang=en"
+                   class="btn btn-outline-light btn-sm">
+                    English
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
